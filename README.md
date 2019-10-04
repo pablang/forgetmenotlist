@@ -1,24 +1,23 @@
-# README
+# Forget Me Not List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic ruby on rails app that allows users to add, check/uncheck and delete items as part of a coding challenge.
 
-Things you may want to cover:
 
-* Ruby version
+## Installation instructions
 
-* System dependencies
+Requires Ruby version 2.6.3.
 
-* Configuration
+Run `bundle install` in the CLI to install all required gems.
 
-* Database creation
+Run the app by typing `rails s` in the CLI.
 
-* Database initialization
+Open http://localhost:3000/ by default unless you've specified otherwise in the configuration.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Dependencies
 
-* Deployment instructions
 
-* ...
+## Design Decisions
+- SQLite3 was chosen for data storage due to the simplicity and accessibility for such a small application. Also removes an extra dependency to someone reviewing this code and running it locally.
+
+## Notes
