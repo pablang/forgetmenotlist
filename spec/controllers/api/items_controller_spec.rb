@@ -37,7 +37,7 @@ RSpec.describe Api::ItemsController, type: :request do
         delete api_item_path(item.id)
       end
 
-      it "destory exisitng item and respond with with 'no_content'" do
+      it "destroy existing item and respond with with 'no_content'" do
         expect(response).to have_http_status(:no_content)
       end
     end
@@ -49,7 +49,7 @@ RSpec.describe Api::ItemsController, type: :request do
         delete api_item_path(item.id)
       end
 
-      it "destroy non existing item and respond with 'no_content'" do
+      it "responds with 'no_content'" do
         expect(response).to have_http_status(:no_content)
       end
     end
