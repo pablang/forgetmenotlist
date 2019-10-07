@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+#items-list {
+  width: 200px;
+}
+.item_box {
+  display: flex;
+  justify-content: space-between;
+}
+.item_box div{
+  width: 140px;
+}
+.grayed-out{
+  color: #ccc;
+}
+.delete-btn {
+  display: inline-block;
+}

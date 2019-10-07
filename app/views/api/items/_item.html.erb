@@ -1,0 +1,10 @@
+  <div class="item_box <%= 'grayed-out' if item.checked? %>" id="list-item-<%= item.id %>">
+
+    <%= form_with model: item, url: api_item_path(item) do |form| %>
+      <%= form.check_box  :checked, class: 'new-item-checked', 'data-item-id': item.id %>
+      <%= form.submit 'Update', id: "submit-item-#{item.id}", style: "display: none;" %>
+    <% end %>
+    <div><%= item.text %></div>
+    <span class="delete-btn"><%= link_to('Delete', api_item_path(item), { method: 'delete', remote: true } )%></span>
+
+  </div>

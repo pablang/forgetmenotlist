@@ -34,11 +34,11 @@ RSpec.describe Api::ItemsController, type: :request do
     context 'when item exists' do
       let(:item) { FactoryBot.create :item }
       before do
-        delete api_item_path(item.id)
+        delete api_item_path(item.id, format: :js)
       end
 
-      it "destroy existing item and respond with with 'no_content'" do
-        expect(response).to have_http_status(:no_content)
+      it "destroy existing item and respond with with 'success'" do
+        expect(response).to have_http_status(:success)
       end
     end
 
@@ -46,11 +46,11 @@ RSpec.describe Api::ItemsController, type: :request do
       let(:item) { FactoryBot.create :item }
       before do
         item.destroy
-        delete api_item_path(item.id)
+        delete api_item_path(item.id, format: :js)
       end
 
-      it "responds with 'no_content'" do
-        expect(response).to have_http_status(:no_content)
+      it "responds with 'success'" do
+        expect(response).to have_http_status(:success)
       end
     end
   end
