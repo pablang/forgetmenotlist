@@ -1,0 +1,8 @@
+$("#items-list").append('<%= escape_javascript (render partial: 'item', locals: { item: @item }) %>');
+$(".item-input").val("");
+
+<%# Apply the change listener to trigger the submit of this item form  %>
+$(".new-item-checked").change(function(){
+  let itemId = $(this).data('item-id');
+  $('#submit-item-' + itemId).trigger('click');
+});
