@@ -68,4 +68,5 @@ Work in progress: Creating some `feature` tests with Capybara and Selenium to do
     - `checked?` (boolean, which can be toggled)
 - SQLite3 was chosen for the ease of use and accessibility since its support is built-in for Rails. Considering the size and purpose of the exercise, I thought it's best to reduce the amount of dependencies.
 
-![app design](/public/app_design.png)
+![app design](https://user-images.githubusercontent.com/51078359/66305268-ad8c1000-e94a-11e9-9a98-24dbd9c8db61.png)
+
