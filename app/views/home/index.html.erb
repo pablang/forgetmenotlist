@@ -1,0 +1,9 @@
+<h1>FORGET ME NOT</h1>
+
+<%= form_with model: @item, url: api_items_path do |form| %>
+ <%= form.text_field :text, class: 'item-input'%>
+ <%= form.submit 'Add' %>
+<% end %>
+<div id="items-list">
+   <%= render partial: 'api/items/item', collection: @items %>
+</div>
